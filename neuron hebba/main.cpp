@@ -9,25 +9,33 @@ double f(double s)
 }
 int main() {
 
-
 	//wartosci
 	double tab1[13] = { 1.0,-1.0,-1.0,1.0,-1.0,-1.0,1.0,-1.0,-1.0,1.0 ,-1.0,-1.0,1.0 }; //jedynka	
-	double tab4[13] = { 1,1,-1,1,1,1,1,-1,-1,1,-1,-1,1 }; //czworka
+	double tab4[13] = { 1.0,1.0,-1.0,1.0,1.0,1.0,1.0,-1.0,-1.0,1.0,-1.0,-1.0,1.0 }; //czworka
 
-	//wpsolczynniki
+	//wagi	
+	double wx1[13] = { 0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0 };
+	double wx2[13] = { 0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0 };
+	
+	//wartosci oczekiwane
 	double d1 = 1.0;
 	double d4 = -1.0;
+
+	//bledy
 	double E;
 	double E1;
 	double E4;
+	
+	//wspolczynnik uczenia
 	double ni = 0.4;
-	double sum;
+	
+	//wartosc funckji
 	double y1;
 	double y4;
 
-	//wagi	
-	double wx1[13] = {0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0};
-	double wx2[13] = { 0,0,0,0,0,0,0,0,0,0,0,0,0};
+	//suma
+	double sum;
+	
 	
 	int d = 0; //kroki 	
 	
