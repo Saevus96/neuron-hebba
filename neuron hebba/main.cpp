@@ -5,8 +5,8 @@
 
 double beta = 0.4;
 
-double f(double tabx) {
-	return (1.0 - exp(-beta * tabx)) / (1.0 + exp(-beta * tabx));
+double f(double s) {
+	return (1.0 - exp(-beta * s)) / (1.0 + exp(-beta * s));
 }
 
 int main() {
