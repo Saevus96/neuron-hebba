@@ -14,8 +14,8 @@ int main() {
 						   { 1.0,1.0,-1.0,1.0,1.0,1.0,1.0,-1.0,-1.0,1.0,-1.0,-1.0,1.0 } };
 	double d[2] = { 1.0, -1.0 };
 	double wx[13] = { 0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0 };
-	double y[2];
-	double n = 0.4;
+	double taby[2];
+	double ni = 0.4;
 	double E;
 	double sum;
 
@@ -27,18 +27,18 @@ int main() {
 				sum += tabx[i][j] * wx[j];
 			}
 
-			y[i] = f(sum);
+			taby[i] = f(sum);
 
 			for (int j = 0; j < 13; j++) {
-				wx[j] = wx[j] + n * d[i] * tabx[i][j];
+				wx[j] = wx[j] + ni * d[i] * tabx[i][j];
 			}
 
-			E += 0.5*(d[i] - y[i])*(d[i] - y[i]);
+			E += 0.5*(d[i] - taby[i])*(d[i] - taby[i]);
 		}
 
 	} while (E > 0.0003);
 
-	std::cout << y[0] << " " << y[1] << std::endl;
+	std::cout << taby[0] << " " << taby[1] << std::endl;
 
 	system("pause");
 	return 0;
